@@ -37,11 +37,34 @@ document.addEventListener("DOMContentLoaded", () => {
         timestamp: new Date()
       });
 
-      alert("Message sent successfully!");
+      showPopup("Message sent successfully!", 'success');
       form.reset();
     } catch (error) {
       console.error("Error adding document: ", error);
-      alert("Failed to send message.");
+      showPopup("Failed to send message.", 'error');
     }
   });
+
+// Custom popup function
+function showPopup(message, type) {
+  const popup = document.createElement('div');
+  popup.className = `popup ${type}`;
+  popup.innerHTML = `
+    <div class="popup-content">
+      <span class="popup-icon">${type === 'success' ? '✓' : '✕'}</span>
+      <span class="popup-message">${message}</span>
+    </div>
+  `;
+
+  document.body.appendChild(popup);
+
+  // Trigger animation
+  setTimeout(() => popup.classList.add('show'), 10);
+
+  // Remove popup after 3 seconds
+  setTimeout(() => {
+    popup.classList.add('fade-out');
+    setTimeout(() => document.body.removeChild(popup), 300);
+  }, 3000);
+}
 });
