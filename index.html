@@ -9,8 +9,20 @@
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <h2>Send a Message</h2>
+  <form id="messageForm">
+    <label for="name">Your Name:</label><br />
+    <input type="text" id="name" required /><br /><br />
+
+    <label for="email">Your Email:</label><br />
+    <input type="email" id="email" required /><br /><br />
+
+    <label for="message">Message:</label><br />
+    <textarea id="message" rows="5" cols="40" required></textarea><br /><br />
+
+    <button type="submit">Send</button>
+  </form>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
