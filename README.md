@@ -1,4 +1,5 @@
 📬 Firebase Message Form with Generative AI Guidance
+
 This project is a simple web application that allows users to send a message (name, email, and text) and stores it in Firebase Firestore.
 What makes this project unique is that it was entirely built using prompts and guidance from a generative AI (ChatGPT) — from setting up Firebase to writing the HTML, JavaScript, and debugging errors. It showcases how developers can leverage AI to accelerate learning, rapid prototyping, and problem-solving.
 
